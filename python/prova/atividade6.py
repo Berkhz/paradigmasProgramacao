@@ -4,3 +4,16 @@
 # - Retorne o valor atualizado de count.
 # 3. A função contador deve retornar a função incrementar.
 # 4. No código principal, crie uma instância da função contador e chame a função incrementar diversas vezes, imprimindo o valor retornado a cada chamada.
+
+def contador():
+    count = 0
+    def incrementar():
+        nonlocal count
+        count += 1
+        return count
+    return incrementar
+
+incrementar = contador()
+print(incrementar())
+print(incrementar())
+print(incrementar())
